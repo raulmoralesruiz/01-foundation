@@ -9,13 +9,7 @@ const name = "Raúl Morales";
   <p>Hora actual: {new Date().toLocaleTimeString()}</p>
   <p id="current-time">Hora real: {new Date().toLocaleTimeString()}</p>
 
-  <footer>default year: 2025</footer>
-
   <script>
-    const currentYear: number = new Date().getFullYear();
-    const footer = document.querySelector("footer") as HTMLElement;
-    footer.innerText = `Año: ${currentYear}`;
-
     const currentTime: string = new Date().toLocaleTimeString();
     const currentTimeEl = document.getElementById(
       "current-time"
