@@ -15,14 +15,20 @@ const title = "Home page";
   <body>
     <h1>{name}</h1>
     <p>Hora actual: {new Date().toLocaleTimeString()}</p>
+    <p id="current-time">Hora real: {new Date().toLocaleTimeString()}</p>
 
     <footer>default year: 2025</footer>
 
     <script>
       const currentYear: number = new Date().getFullYear();
-
       const footer = document.querySelector("footer") as HTMLElement;
       footer.innerText = `Año: ${currentYear}`;
+
+      const currentTime: string = new Date().toLocaleTimeString();
+      const currentTimeEl = document.getElementById(
+        "current-time"
+      ) as HTMLElement;
+      currentTimeEl.innerText = `Hora real: ${currentTime}`;
     </script>
   </body>
 </html>
